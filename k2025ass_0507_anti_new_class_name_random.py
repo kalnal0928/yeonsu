@@ -76,26 +76,29 @@ driver.maximize_window()
 
 # 아이디 입력
 # 방법 1: CSS_SELECTOR와 클래스 사용 (점으로 공백 대체)
+# try:
+#     id_field = WebDriverWait(driver, 10).until(
+#         EC.element_to_be_clickable((By.CSS_SELECTOR, ".text_login.id"))
+#     )
+#     id_field.click()
+#     my_id = "********"  # 아이디 입력
+#     pyperclip.copy(my_id)
+#     pyautogui.hotkey("ctrl", "v")
+#     time.sleep(1)
+# except Exception as e:
+#     print("CSS 선택자로 접근 실패:", e)
+
 try:
     id_field = WebDriverWait(driver, 10).until(
-        EC.element_to_be_clickable((By.CSS_SELECTOR, ".text_login.id"))
+        EC.element_to_be_clickable((By.XPATH, "//input[@placeholder='6~20자의 영문, 숫자만 가능']"))
     )
     id_field.click()
-    my_id = "********"  # 아이디 입력
+    my_id = "*********"  # 아이디 입력
     pyperclip.copy(my_id)
     pyautogui.hotkey("ctrl", "v")
     time.sleep(1)
 except Exception as e:
-    print("CSS 선택자로 접근 실패:", e)
-
-# # 방법 2: XPath와 placeholder 속성 사용
-# try:
-#     id_field = WebDriverWait(driver, 10).until(
-#         EC.element_to_be_clickable((By.XPATH, "//input[@placeholder='6~20자의 영문, 숫자만 가능']"))
-#     )
-#     id_field.click()
-# except Exception as e:
-#     print("XPath placeholder로 접근 실패:", e)
+    print("XPath placeholder로 접근 실패:", e)
 
 # # 방법 3: XPath와 title 속성 사용
 # try:
@@ -139,16 +142,17 @@ except Exception as e:
 
 
 try:
-    password_field = WebDriverWait(driver, 10).until(
-        EC.element_to_be_clickable((By.CSS_SELECTOR, ".text_login.pw"))
+    id_field = WebDriverWait(driver, 10).until(
+        EC.element_to_be_clickable((By.XPATH, "//input[@placeholder='비밀번호를 입력하세요']"))
     )
-    password_field.click()
-    my_pass = "*******" # 비밀번호 입력
-    pyperclip.copy(f'{my_pass}')
+    id_field.click()
+    my_pass = "*********" # 비밀번호 입력
+    pyperclip.copy(my_pass)
     pyautogui.hotkey("ctrl", "v")
     time.sleep(1)
 except Exception as e:
-    print("CSS 선택자로 비밀번호 필드 접근 실패:", e)
+    print("XPath placeholder로 접근 실패:", e)
+    
 # try:
 #     id_field = WebDriverWait(driver, 10).until(
 #         EC.element_to_be_clickable((By.CSS_SELECTOR, ".text_login pw"))
