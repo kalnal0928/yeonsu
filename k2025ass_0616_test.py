@@ -79,7 +79,7 @@ driver.maximize_window()
 #         EC.element_to_be_clickable((By.CSS_SELECTOR, ".text_login.id"))
 #     )
 #     id_field.click()
-#     my_id = "kalnal0928"
+#     my_id = "********"
 #     pyperclip.copy(my_id)
 #     pyautogui.hotkey("ctrl", "v")
 #     time.sleep(1)
