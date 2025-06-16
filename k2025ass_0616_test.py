@@ -156,7 +156,7 @@ except Exception as e:
 #         EC.element_to_be_clickable((By.CSS_SELECTOR, ".text_login.pw"))
 #     )
 #     password_field.click()
-#     my_pass = "an09283259@"
+#     my_pass = "********"
 #     pyperclip.copy(f'{my_pass}')
 #     pyautogui.hotkey("ctrl", "v")
 #     time.sleep(1)
@@ -167,7 +167,7 @@ except Exception as e:
 #         EC.element_to_be_clickable((By.CSS_SELECTOR, ".text_login pw"))
 #     )
 #     id_field.click()
-#     my_pass = "an09283259@"
+#     my_pass = "********"
 #     pyperclip.copy(f'{my_pass}')
 #     pyautogui.hotkey("ctrl", "v")
 #     time.sleep(1)
@@ -178,7 +178,7 @@ except Exception as e:
 
 # pw_input = wait.until(EC.presence_of_element_located((By.CLASS_NAME, 'text_login pw')))
 # driver.execute_script("arguments[0].click();", pw_input)  # JavaScript로 클릭
-# my_pass = "an09283259@"
+# my_pass = "********"
 # pyperclip.copy(my_pass)
 # pyautogui.hotkey("ctrl", "v")
 # time.sleep(1)
